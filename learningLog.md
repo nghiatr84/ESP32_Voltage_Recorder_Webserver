@@ -1,6 +1,6 @@
 # Retrieving Triboelectric Device Voltage Level
 ## Project Learning Log
-### A􀅌er the project, I have:
+### After the project, I have:
 - Furthered my understanding in developing embedded device using ESP32 microcontroller,
 - Furthered my understanding in developing web server using ESP32 microcontroller,
 - Learned to send requests to web server using HTML and JavaScript,
@@ -18,12 +18,12 @@ Because the current is so small, a decent voltage divider will dissipate all the
 Using smaller resistance resistors is also not an op􀆟on since it will cause a short circuit. The
 solu􀆟on I have come up with is to use only one resistor so that the voltage drops but the current
 went through enough for the ADC of ESP32 to read. I have tried a lot of resistors and recheck the
-read voltage from ESP32 with a mul􀆟-meter to ensure the accuracy of the voltage being
+read voltage from ESP32 with a multi-meter to ensure the accuracy of the voltage being
 recorded.
 - ADC2 pins of an ESP32 would not work with Wi-Fi turned on, and I must switch to ADC1 pins
-instead. This is men􀆟oned in the documenta􀆟on of the ESP32; however, it took me a lot of 􀆟me
+instead. This is mentioned in the documentation of the ESP32; however, it took me a lot of 􀆟me
 to find out the problem.
 - Making the web server and the web client was a challenge themselves. I consulted internet
-forums extensively and spent a lot of 􀆟me figuring out, but eventually managed to finish it.
-In my honest opinion, there is nothing I could have done be􀆩er in general. These challenges are the
+forums extensively and spent a lot of time figuring out, but eventually managed to finish it.
+In my honest opinion, there is nothing I could have done better in general. These challenges are the
 parts of every project, and every project has its own problems that need to be tackled.
