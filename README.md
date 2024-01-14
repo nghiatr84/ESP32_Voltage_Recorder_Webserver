@@ -2,8 +2,11 @@
 ## Project Documentation
 ### Description: 
 A device that can be used to measure Alternating Current (AC) voltage level generated from a triboelectric device by rectifying the current to a Direct Current (DC) and read the voltage level through an Analog-Digital Converter (ADC) pin of the microcontroller Espressif ESP32-WROOM-32E. The hardware will be accompanied by a web server which visualises and handles recorded data.
+
 Project Managers: Dr Ramyah Gowrishankar, Prof Yu Xiao
+
 Project Owner: Nghia Tran
+
 ### Timeline:
 - Prototype version 1: 24.09.2023.
 - Prototype version 2: 08.10.2023.
@@ -24,7 +27,7 @@ The scope of this project includes creating a fully functional prototype and a p
 The process of developing the Objective step-by-step.
 #### Prototype version 1
 ##### Objective 1.1:
-To read the voltage, we use Arduino analogRead() function. The ESP32 returns a range from 0 - 4095 for the raw analogRead() values, and we need to map those discrete values to volts. According to the manufacturer Espressif, ESP32-WROOM-32E can read from 0 – 3.3V maximum (https://docs.espressif.com/projects/esp-idf/en/v4.2/esp32/api-reference/peripherals/adc.html), so we are mapping 0 - 4095 to 0 – 3.3 by dividing the received value by 3.3 \over 4095.
+To read the voltage, we use Arduino analogRead() function. The ESP32 returns a range from 0 - 4095 for the raw analogRead() values, and we need to map those discrete values to volts. According to the manufacturer Espressif, ESP32-WROOM-32E can read from 0 – 3.3V maximum (https://docs.espressif.com/projects/esp-idf/en/v4.2/esp32/api-reference/peripherals/adc.html), so we are mapping 0 - 4095 to 0 – 3.3 by dividing the received value by {3.3 \over 4095}.
 Following Figure 1 schematic, we created the rectifying circuit needed to change AC from the triboelectric device to DC. Then, the 1nF capacitor is used to stabilise the input. The microcontroller ESP32-WROOM-32E can only read inputs up to 3.3V. Furthermore, the triboelectric device produces high voltage but low current electricity, and the effect happens very fast (as fast as the friction time of the cloth components). Therefore, we place a 4700 Ohms resistor to scale down the input voltage. Through experiments, we have reached a conclusion that a 4700 Ohms resistor works best for the ESP32 microcontroller to read the voltage as accurate as a multi-meter. 
  
  ![image](https://github.com/nghiatr84/ESP32_Voltage_Recorder_Webserver/assets/132190213/7b285508-1b00-4d70-9711-cd1e4ed4c8af)
