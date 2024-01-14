@@ -5,21 +5,21 @@ A device that can be used to measure Alternating Current (AC) voltage level gene
 Project Managers: Dr Ramyah Gowrishankar, Prof Yu Xiao
 Project Owner: Nghia Tran
 ### Timeline:
-	Prototype version 1: 24.09.2023.
-	Prototype version 2: 08.10.2023.
-	Final product: 15.10.2023
-	Documentation and Learning Log: 20.10.2023.
+- Prototype version 1: 24.09.2023.
+- Prototype version 2: 08.10.2023.
+- Final product: 15.10.2023
+- Documentation and Learning Log: 20.10.2023.
 ### Scope: 
 The scope of this project includes creating a fully functional prototype and a printed circuit board (PCB) schematic for further development.
 ### Goals and Objectives:
-	Prototype version 1: Develop a fully functional embedded prototype.
-	Objective 1.1: The device can read the voltage level accurately.
-	Objective 1.2: The device can operate within a desired response time.
-	Prototype version 2: Develop a fully functional web server that can handle recorded data.
-	Objective 2.1: The web server can visualise the recorded data.
-	Objective 2.2: The web server can instruct the microcontroller to start/stop recording data.
-	Objective 2.3: The web server can control the microcontroller recording speed.
-	Objective 2.4: The web server can download the recorded data.
+- Prototype version 1: Develop a fully functional embedded prototype.
+	- Objective 1.1: The device can read the voltage level accurately.
+	- Objective 1.2: The device can operate within a desired response time.
+- Prototype version 2: Develop a fully functional web server that can handle recorded data.
+	- Objective 2.1: The web server can visualise the recorded data.
+	- Objective 2.2: The web server can instruct the microcontroller to start/stop recording data.
+	- Objective 2.3: The web server can control the microcontroller recording speed.
+	- Objective 2.4: The web server can download the recorded data.
 ### Process:
 The process of developing the Objective step-by-step.
 #### Prototype version 1
