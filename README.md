@@ -31,6 +31,10 @@ Following Figure 1 schematic, we created the rectifying circuit needed to change
 
 Figure 1: Rectifying circuit and microcontroller pinout schematic
 
+![PCB_3D_batteryUpdate](https://github.com/nghiatr84/ESP32_Voltage_Recorder_Webserver/assets/132190213/fadd8315-6a90-4550-a15b-60fe49abb843)
+
+Figure 2: The model PCB 3D model
+
 ##### Objective 1.2:
 We must use a capacitor to stabilise the current, otherwise there would be too much noise to read from. The problem with response time is if we use a capacitor that is too high of a Farad value, it will take longer time to charge and discharge. On the other hand, too low of a Farad value would cause the microcontroller to read in more noise. The aim here is to find which capacitor works best. The triboelectric device voltage level can be varied vastly according to when we try to record, so the most practical way to find the best capacitor is by experimenting with a wide range of them. Finally, the best capacitor for this triboelectric device is 1nF capacitor.
 #### Prototype version 2
