@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- include the highcharts lib -->
+        <script src="https://code.highcharts.com/highcharts.js"></script> 
+        <style>
+            body {
+                min-width: 310px;
+                max-width: 800px;
+                height: 400px;
+                margin: 0 auto;
+            }
+            h2 {
+                font-family: Arial;
+                font-size: 2.5rem;
+                text-align: center;
+            }
+        </style>
+    </head>    
+    <body>
+        <h2>ESP32 Voltage Sensor</h2>
+        <!-- div for the chart -->
+        <div id="chart-voltage" class="container"></div>        
+        <a href="/data.txt" download="/data.txt">
+            <button type="button">Download log</button>
+        </a>
+    </body>
+
+
+    <!-- JS code to create the chart and add data to it -->
+    <script>
+        var chart = new Highcharts.Chart({
+            chart:{ renderTo: "chart-voltage" },
+            title:{ text: 'Triboelectric device' },
+            series: [{
+                showInLegend: false,
+                data: []
+            }],
+            plotOptions: {
+                line: { animation: false,
+                    dataLabels: {enabled: true}
+                },
+                series: {color: '#059e8a'}
+            },
+            xAxis: {type: 'datetime',
+                dateTimeLabelFormats: {second: '%H:%M:%S'}
+        },
+        yAxis: {
+            title: {text: 'Voltage (Volt)'}
+        },
+        credits: {enabled: false}
+        });
+        // Add points to the chart every 2s
+        setInterval(function(){
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    var x = (new Date()).getTime(),
+                        y = parseFloat(this.responseText);
+                        console.log(this.responseText);
+                    if(chart.series[0].data.length > 40){
+                        chart.series[0].addPoint([x, y], true, true, true);                        
+                    } else{
+                        chart.series[0].addPoint([x, y], true, false, true);
+                    }
+                }
+            };            
+            xhttp.open("GET", "/voltage", true);
+            xhttp.send();
+        }, 2000 );
+    </script>
+</html>
