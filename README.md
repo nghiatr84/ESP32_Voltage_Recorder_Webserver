@@ -47,3 +47,10 @@ For Objective 2.1, we use highcharts.js library for making the graph and html fo
 	Jumper wires
 	Breadboard: 1 piece
 	Alligator clips: 2 pieces
+#### IDEs & libraries used:
+- VSCode with Platform.io plugin
+- Arduino IDE with
+- 	LittleFS.h library for file handling
+- 	Wifi.h and ESPAsyncWebServer.h libraries for WiFi AccessPoint/Station handling
+- 	time.h library for time managing
+- 	Arduino.h library frame to handle ESP32 microcontroller
