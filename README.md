@@ -1,4 +1,8 @@
 # Retrieving Triboelectric Device Voltage Level
+
+<!-- ![A gif which demonstrates the device](./demonstration.gif) -->
+<img alt="A gif which demonstrates the device" src="./demonstration.gif" width="600" height="375" />
+
 ## Project Documentation
 ### Description: 
 A device that can be used to measure Alternating Current (AC) voltage level generated from a triboelectric device by rectifying the current to a Direct Current (DC) and read the voltage level through an Analog-Digital Converter (ADC) pin of the microcontroller Espressif ESP32-WROOM-32E. The hardware will be accompanied by a web server which visualises and handles recorded data.
